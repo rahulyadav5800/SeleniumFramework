@@ -50,6 +50,12 @@ public class AutomationScriptPage {
 	       Assert.assertEquals(actual, ele, "not found");
 	       
 	       System.out.println("Done");
+
+		WebElement searchBox = driver.findElement(By.name("q"));
+    searchBox.sendKeys("Selenium");
+    searchBox.submit();
+    Assert.assertTrue(driver.getTitle().contains("Selenium"));
+    driver.quit();
 	       Thread.sleep(9000);
 	       driver.close();
 	}}
