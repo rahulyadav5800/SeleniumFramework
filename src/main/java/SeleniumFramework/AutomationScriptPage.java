@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.WebElement;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -56,8 +56,7 @@ public class AutomationScriptPage {
     searchBox.submit();
     Assert.assertTrue(driver.getTitle().contains("Selenium"));
     driver.quit();
-	       Thread.sleep(9000);
-	       driver.close();
+	       
 	}}
 	      
 	       
